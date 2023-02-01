@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import './pages/HomePage/HomePage';
+import './pages/CharacterPage/CharacterPage';
+import './pages/CharactersPage/CharactersPage';
+import './pages/CronologyPage/CronologyPage';
+import './pages/HousesPages/HousesPages';
+import './pages/HousePage/HousePage';
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import HomePage from './pages/HomePage/HomePage';
+import CharacterPage from './pages/CharacterPage/CharacterPage';
+import CharactersPage from './pages/CharactersPage/CharactersPage';
+import CronologyPage from './pages/CronologyPage/CronologyPage';
+import HousesPage from './pages/HousesPages/HousesPages';
+import HousePage from './pages/HousePage/HousePage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+            <Route path='/' element={<HomePage></HomePage>} />
+            <Route path='/characters' element={<CharactersPage></CharactersPage>} />
+            <Route path='/character' element={<CharacterPage></CharacterPage>} />
+            <Route path='/cronology' element={<CronologyPage></CronologyPage>} />
+            <Route path='/houses' element={<HousesPage></HousesPage>} />
+            <Route path='/house' element={<HousePage></HousePage>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
