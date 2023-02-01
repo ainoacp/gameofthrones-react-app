@@ -1,0 +1,31 @@
+.main{
+    min-height: 80vh;
+    background-color: black;
+    color:white;
+    padding:10vh 0px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-section{
+    // height: 250px;
+
+    img{
+        width: 200px;
+        height: 220px;
+        object-fit: fill;
+    }
+}
+
+.info-section{
+    // height: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 100px;
+}
+
+.info-container{
+    width: 250px;
+}
