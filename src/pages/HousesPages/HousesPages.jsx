@@ -3,6 +3,7 @@ import axios from "axios";
 import NavComponent from "../../components/shared/NavComponent/NavComponent";
 import "./HousesPages.scss";
 import HouseCard from "./components/HouseCard/HouseCard";
+import { Link } from "react-router-dom";
 
 export default function HousesPage(){
     
@@ -46,7 +47,9 @@ export default function HousesPage(){
                 <div className="card-section">
                     <ul className="card-list">
                         {houses.map((house)=> (
-                            <HouseCard house={house}/>
+                            <Link key={house._id} to={`/houses/${house.name}`}>
+                                <HouseCard house={house}/>
+                            </Link>
                         ))}
                     </ul>
                 </div>
