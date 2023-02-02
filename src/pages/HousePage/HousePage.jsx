@@ -13,7 +13,7 @@ export default function HousePage(){
 
     useEffect(() => {
         async function getHouse(){
-            const res = await axios.get(`https://api.got.show/api/show/houses/${name}`);
+            const res = await axios.get(`https://api.got.show/api/book/houses/${name}`);
             setHouse(res.data[0]);
         }
         getHouse();
@@ -23,7 +23,7 @@ export default function HousePage(){
         <div className="main">
             <BackButton></BackButton>
             <div className="logo-section">
-                <img alt="logo" src={house.logoURL}/>
+                <img alt="logo" src={house.image}/>
                 <h3>{house.name}</h3>
             </div>
             <div className="info-section">

@@ -11,9 +11,9 @@ export default function HousesPage(){
 
     useEffect(() => {
         async function getHouses(){
-            const res = await axios.get('https://api.got.show/api/show/houses');
+            const res = await axios.get('https://api.got.show/api/book/houses');
             //Filter 1
-            const resFiltered = res.data.filter((item) => typeof item.logoURL === 'string');
+            const resFiltered = res.data.filter((item) => typeof item.image === 'string');
             // //Filter 2
             // const resFiltered2 = [];
             // for (let item of resFiltered){
@@ -21,8 +21,9 @@ export default function HousesPage(){
             //         resFiltered2.push(item);
             //     }
             // }
-            // setHouses(resFiltered2);
             setHouses(resFiltered);
+            // setHouses(res.data);
+            // console.log(res.data)
         }
         getHouses();
     }, []);
