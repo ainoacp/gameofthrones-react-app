@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  font-family: 'Cinzel Decorative', cursive;
 }
 
 .App-logo {
@@ -37,4 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
