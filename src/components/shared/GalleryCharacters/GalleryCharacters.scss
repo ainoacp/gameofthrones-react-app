@@ -1,0 +1,42 @@
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+    margin: 40px 156px;
+    gap: 30px;
+}
+.card{
+    width: 248px;
+    height: 320px;
+    position: relative;
+    margin: 0;
+}
+
+.card:hover figcaption{
+    display: block;
+    margin: 0;
+}
+
+figcaption{
+    display: none;
+    position: absolute;
+    top: 260px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+img{
+    width: 248px;
+    height: 320px;
+}
