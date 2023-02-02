@@ -18,12 +18,12 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-            <Route path='/' element={<HomePage></HomePage>} />
-            <Route path='/characters' element={<CharactersPage></CharactersPage>} />
-            <Route path='/characters/:name' element={<CharacterPage></CharacterPage>} />
-            <Route path='/cronology' element={<CronologyPage></CronologyPage>} />
-            <Route path='/houses' element={<HousesPage></HousesPage>} />
-            <Route path='/houses/:name' element={<HousePage></HousePage>} />
+            <Route path='/' element={<HomePage/>} />
+            <Route path='/characters' element={<CharactersPage/>} />
+            <Route path='/characters/:name' element={<CharacterPage/>} />
+            <Route path='/cronology' element={<CronologyPage/>} />
+            <Route path='/houses' element={<HousesPage/>} />
+            <Route path='/houses/:name' element={<HousePage/>} />
         </Routes>
       </Router>
     </div>
