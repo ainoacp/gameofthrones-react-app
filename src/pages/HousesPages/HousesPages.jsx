@@ -4,10 +4,12 @@ import NavComponent from "../../components/shared/NavComponent/NavComponent";
 import "./HousesPages.scss";
 import HouseCard from "./components/HouseCard/HouseCard";
 import { Link } from "react-router-dom";
+import Searcher from "../../components/shared/Searcher/Searcher";
 
 export default function HousesPage(){
     
     const [houses, setHouses] = useState([]);
+    const [filteredHouses, setFilterHouses] = useState([])
 
     useEffect(() => {
         async function getHouses(){
@@ -24,6 +26,7 @@ export default function HousesPage(){
             setHouses(resFiltered);
             // setHouses(res.data);
             // console.log(res.data)
+            setFilterHouses(resFiltered);
         }
         getHouses();
     }, []);
@@ -39,15 +42,21 @@ export default function HousesPage(){
         }
     }
 
+    const filterHouses = async (searchText) => {
+        let newHouses = houses.filter((house) => house.name.toLowerCase().includes(searchText.toLowerCase()))
+        setFilterHouses(newHouses);
+    }
+
     return (
         <div className="houses-main">
             <header>
                 <div>Buscador</div>
             </header>
             <main>
+                <Searcher onSubmit={filterHouses}/>
                 <div className="card-section">
                     <ul className="card-list">
-                        {houses.map((house)=> (
+                        {filteredHouses.map((house)=> (
                             <Link key={house._id} to={`/houses/${house.name}`}>
                                 <HouseCard house={house}/>
                             </Link>

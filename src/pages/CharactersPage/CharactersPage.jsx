@@ -3,7 +3,7 @@ import './CharactersPage.scss'
 import { useEffect, useState } from "react";
 import GalleryCharacters from "../../components/shared/GalleryCharacters/GalleryCharacters";
 import NavComponent from "../../components/shared/NavComponent/NavComponent";
-import CharactersSearcher from "../../components/shared/CharactersSearcher/CharactersSearcher";
+import Searcher from "../../components/shared/Searcher/Searcher";
 //import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
 
 
@@ -27,7 +27,7 @@ export default function CharactersPage(){
     return (
         <div>
             {/* <TranslatorNavComponent></TranslatorNavComponent> */}
-            <CharactersSearcher onSubmit={filterCharacters}/>
+            <Searcher onSubmit={filterCharacters}/>
             <GalleryCharacters characters={filteredCharacters}/>
             <NavComponent/>
         </div>
