@@ -1,3 +1,13 @@
+import '../../components/shared/NavComponent/NavComponent'
+import '../../components/shared/TranslatorNavComponent/TranslatorNavComponent'
+import '../../components/shared/HouseLink/HouseLink'
+
 export default function CronologyPage(){
-    return <h1>Cronology</h1>
+    return (
+        <>
+        <HouseLink/>
+        <TranslatorNavComponent/>
+        <NavComponent/>
+        </>
+    )
 }
