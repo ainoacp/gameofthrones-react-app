@@ -1,34 +1,24 @@
-.card-section{
-    // min-height: 20vh;
-    padding: 0px 50px;
-}
-
-.card-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style:none;
-    gap:10px;
-}
-
-.header-houses{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    &-lang{
-        padding-right: 30px;
-    }
-}
-
-.houses-main{
+.c-houses-page{
     background-color: black;
+    height: 100vh;
 }
 
-.nav-houses{
-    height: 18.3vh;
+.c-houses-header{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    // height: 10vh;
+}
+
+.c-houses-main{
+    // height: 70vh;
+}
+
+.c-nav-houses{
+    // height: 18.3vh;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // height: 27.2vh;
+    padding-top: 30px;
 }

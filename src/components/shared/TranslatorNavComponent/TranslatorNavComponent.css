@@ -3,8 +3,8 @@
     background-size: cover; 
 } */
 .button1{
-    width: 6vw;
-    height: 7vh;
+    width: 65px;
+    height: 45px;
     background-image: url("https://d1bvpoagx8hqbg.cloudfront.net/originals/bandera-espana-224c725f1e6eaac8ff319d60bae7127f.jpg");
     background-size: cover;
     background-position:center;
@@ -20,8 +20,8 @@
 }
 
 .button2{
-    width: 6vw;
-    height: 7vh;
+    width: 65px;
+    height: 45px;
     background-image: url("https://static8.depositphotos.com/1518767/1030/i/950/depositphotos_10307320-stock-photo-uk-flag.jpg");
     background-size: cover;
     background-position:center;
@@ -37,10 +37,9 @@
 }
 
 .nav-translate{
-    color: white;
     display: flex;
     gap: 20px;
-    align-content: stretch;
-    flex-direction: row-reverse;
-    padding: 40px 40px 0;
+    flex-direction: row;
+    padding: 40px 40px 0 20px;
+    justify-content: flex-end;
 }

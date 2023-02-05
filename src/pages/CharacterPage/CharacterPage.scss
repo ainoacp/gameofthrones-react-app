@@ -1,9 +1,12 @@
-.ch-header{
-    display: flex;
-    height: 10vh;
-    align-items: flex-start;
+.c-character-header{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: 10vh;
+        background-color: black;
+        
     .back-button-container{
-        padding: 50px 20px 20px 50px; 
+        font-family: "Lato", sans-serif;
     }
 }
 
@@ -46,6 +49,7 @@
     width: 250px;
     font-family: "Lato", sans-serif;
     display: block;
+
     h5{
         font-size: 24px;
         font-family: "Game of Thrones";
@@ -60,6 +64,8 @@
         font-size: 16px;
         display: block;
         padding: 8px;
+        text-decoration: none;
+        color: white;
     }
 
     img{
@@ -78,6 +84,9 @@
     background-color: rgb(255, 255, 255);
     max-height: 25px;
     .simplebar-scrollbar::before {
-        max-height: 230
+        max-height: 230px;
     }
+}
+.simplebar-wrapper {
+    height: 20vh;
 }

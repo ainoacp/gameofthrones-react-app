@@ -12,8 +12,6 @@ export default function GalleryCharacters({characters}) {
                 <img src={character.image} alt={character.name}/>
                 <figcaption>
                     <Link to={`/characters/${character.name}`}>{character.name}</Link>
-                    {/* <p>{character.house}</p>
-                    <Link to={`/characters/${character.origin}`}>{character.origin}</Link> */}
                 </figcaption>
             </figure>))}
         </div>

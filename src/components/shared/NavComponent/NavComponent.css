@@ -1,8 +1,13 @@
-a{
+.nav-component{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link{
     color: white;
     text-decoration: none;
     font-size: 25px;
     text-transform: uppercase;
     font-family: 'GamesOfThrones';
-    
+    margin: 50px 100px;
 }

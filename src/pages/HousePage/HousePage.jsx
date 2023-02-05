@@ -1,10 +1,11 @@
-import { ErrorResponse } from "@remix-run/router";
+//import { ErrorResponse } from "@remix-run/router";
 import axios from "axios";
 import { useState,useEffect } from "react";
 import "./HousePage.scss";
 import { useParams } from 'react-router-dom';
 import BackButton from "../../components/shared/BackButton/BackButton";
 import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
+import HomeLink from "../../components/shared/HomeLink/HomeLink";
 
 export default function HousePage(){
 
@@ -22,19 +23,16 @@ export default function HousePage(){
     }, []);
 
     return (
-        <div className="main">
-            <div className="header-house"> 
-                <BackButton></BackButton>
-                <TranslatorNavComponent/> 
+        <>
+            <div className="c-house-header">
+                    <BackButton/>
+                    <HomeLink/>
+                    <TranslatorNavComponent/>
             </div>
-            <div className="logo-section">
-                <img alt="logo" src={house.image}/>
-                <h3>{house.name}</h3>
-            </div>
-            <div className="info-section">
-                <div className="info-container">
-                    <h5>LEMA</h5>
-                    <p>{house.words}</p>
+            <div className="main">
+                <div className="logo-section">
+                    <img alt="logo" src={house.image}/>
+                    <h3>{house.name}</h3>
                 </div>
                 <div className="info-container">
                     <h5>SEDE</h5>
@@ -53,6 +51,6 @@ export default function HousePage(){
                     <p>{house.founder}</p>                   
                 </div>
             </div>
-        </div>
+        </>
     )
 }

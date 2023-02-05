@@ -3,35 +3,21 @@ import axios from "axios";
 import NavComponent from "../../components/shared/NavComponent/NavComponent";
 import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
 import "./HousesPages.scss";
-import HouseCard from "./components/HouseCard/HouseCard";
-import { Link } from "react-router-dom";
 import Searcher from "../../components/shared/Searcher/Searcher";
-import SimpleBar from 'simplebar-react';
+import HomeLink from "../../components/shared/HomeLink/HomeLink";
+import GalleryHouses from "../../components/shared/GalleryHouses/GalleryHouses";
 
 export default function HousesPage(){
     
     const [houses, setHouses] = useState([]);
     const [filteredHouses, setFilterHouses] = useState([])
 
-    useEffect(() => {
-        async function getHouses(){
-            const res = await axios.get('https://api.got.show/api/book/houses');
-            //Filter 1
-            const resFiltered = res.data.filter((item) => typeof item.image === 'string');
-            // //Filter 2
-            // const resFiltered2 = [];
-            // for (let item of resFiltered){
-            //     if(imageExists(item.logoURL)){
-            //         resFiltered2.push(item);
-            //     }
-            // }
-            setHouses(resFiltered);
-            // setHouses(res.data);
-            // console.log(res.data)
-            setFilterHouses(resFiltered);
-        }
-        getHouses();
-    }, []);
+    const getHouses = async () => {
+        const res = await axios.get('https://api.got.show/api/book/houses');
+        const resFiltered = res.data.filter((item) => typeof item.image === 'string');
+        setHouses(resFiltered);
+        setFilterHouses(resFiltered);
+    }
 
     function imageExists(image_url){
         var http = new XMLHttpRequest();
@@ -48,28 +34,20 @@ export default function HousesPage(){
         let newHouses = houses.filter((house) => house.name.toLowerCase().includes(searchText.toLowerCase()))
         setFilterHouses(newHouses);
     }
-
+    useEffect(() => {getHouses('')}, [])
+    
     return (
-        <div className="houses-main">
-            <div className="header-houses">
+        <div className="c-houses-page">
+            <div className="c-houses-header">
                 <Searcher onSubmit={filterHouses}/>
-                <div className="header-houses-lang">
-                    <TranslatorNavComponent/> 
-                </div>
+                <HomeLink/>
+                <TranslatorNavComponent/>
             </div>
-            <div className="card-section">
-                <SimpleBar style={{ maxHeight: 800, marginRight: 20}}>
-                    <ul className="card-list"> 
-                        {filteredHouses.map((house)=> (
-                            <Link key={house._id} to={`/houses/${house.name}`}>
-                                <HouseCard house={house}/>
-                            </Link>
-                        ))}
-                    </ul>
-                </SimpleBar>
+            <div className="c-houses-main">
+                <GalleryHouses houses={filteredHouses}/>
             </div>
-            <div className="nav-houses">
-                <NavComponent className="searcher-hoouses"/>
+            <div className="c-nav-houses">
+                <NavComponent/>
             </div>
         </div>
     )

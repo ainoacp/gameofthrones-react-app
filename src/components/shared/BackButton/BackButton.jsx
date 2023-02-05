@@ -21,14 +21,10 @@ export default function BackButton(){
     }, []);
 
     return (
-        <>
-            <div className="back-button-container">
-                <Link to={prevUrl}>
-                    <img alt="back" src="./images/back.png"/>
-                    <button> Volver</button>
-                </Link>
-            </div>
-        </>
-        
+        <div className="back-button-container">
+            <Link to={prevUrl}>
+                <button> ← Volver</button>
+            </Link>
+        </div>
     )
 }
