@@ -84,10 +84,9 @@
     background-color: rgb(255, 255, 255);
     max-height: 25px;
     .simplebar-scrollbar::before {
-        max-height: 230
+        max-height: 230px;
     }
 }
 .simplebar-wrapper {
     height: 20vh;
-
 }
