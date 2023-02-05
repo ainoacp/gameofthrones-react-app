@@ -4,9 +4,6 @@ export const es = {
     "characters": "personajes",
     "cronology": "cronologia",
     "houses": "casas",
+    "games of thrones": "juego de tronos",
    
-//     "add": "suma",
-//     "sub": "resta",
-//     "description" : "i18next es un marco de internacionalización escrito en y para JavaScript. ¡Pero es mucho más que eso!"
-    
 }

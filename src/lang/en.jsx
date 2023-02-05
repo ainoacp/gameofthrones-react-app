@@ -4,5 +4,5 @@ export const en = {
     "characters": "characters",
     "cronology": "cronology",
     "houses": "houses",
-    
+    "games of thrones": "games of thrones",
 }
