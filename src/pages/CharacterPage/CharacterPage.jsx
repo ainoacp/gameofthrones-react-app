@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import BackButton from "../../components/shared/BackButton/BackButton";
-// import '../../components/shared/TranslatorNavComponent/TranslatorNavComponent';
+import '../../components/shared/TranslatorNavComponent/TranslatorNavComponent';
 // import '../../components/shared/HouseLink/HouseLink';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
