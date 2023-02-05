@@ -1,46 +1,51 @@
+.c-house-page{
+    background-color: black;
+    height: 100vh;
+}
+
 .c-house-header{
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    height: 10vh;
     background-color: black;
+    height: 10%;
+
     .back-button-container{
         font-family: "Lato", sans-serif;
     }
 }
 
-.main{
-    min-height: 90vh;
+.c-house-main{
+    // min-height: 40vh;
     background-color: black;
+    height: 90%;
     color:white;
-    padding:5vh 0px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-}
+    &__shield-section{
+        // height: 250px;
+        padding: 30px 0px;
+    
+        img{
+            width: 200px;
+            height: 220px;
+            object-fit: fill;
+        }
+    }
 
-.logo-section{
-    // height: 250px;
+    &__info{
+        display: flex;
+        justify-content: space-around;
+        margin: 0px 100px;
 
-    img{
-        width: 200px;
-        height: 220px;
-        object-fit: fill;
+        &-box{
+            width: 250px;
+        }
     }
 }
 
-.info-section{
-    // height: 200px;
-    display: flex;
-    justify-content: space-around;
-    margin: 0px 100px;
-}
-
-.info-container{
-    width: 250px;
-}
 
 
 

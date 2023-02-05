@@ -23,34 +23,36 @@ export default function HousePage(){
     }, []);
 
     return (
-        <>
+        <div className="c-house-page">
             <div className="c-house-header">
                     <BackButton/>
                     <HomeLink/>
                     <TranslatorNavComponent/>
             </div>
-            <div className="main">
-                <div className="logo-section">
+            <div className="c-house-main">
+                <div className="c-house-main__shield">
                     <img alt="logo" src={house.image}/>
                     <h3>{house.name}</h3>
                 </div>
-                <div className="info-container">
-                    <h5>SEDE</h5>
-                    <p>{house.seat}</p>
-                </div>
-                <div className="info-container">
-                    <h5>REGION</h5>
-                    <p>{house.region}</p>                   
-                </div>
-                <div className="info-container">
-                    <h5>CURRENT LORD</h5>
-                    <p>{house.currentLord}</p>                   
-                </div>
-                <div className="info-container">
-                    <h5>FOUNDER</h5>
-                    <p>{house.founder}</p>                   
+                <div className="c-house-main__info">
+                    <div className="c-house-main__info-box">
+                        <h5>SEDE</h5>
+                        <p>{house.seat}</p>
+                    </div>
+                    <div className="c-house-main__info-box">
+                        <h5>REGION</h5>
+                        <p>{house.region}</p>                   
+                    </div>
+                    <div className="c-house-main__info-box">
+                        <h5>CURRENT LORD</h5>
+                        <p>{house.currentLord}</p>                   
+                    </div>
+                    <div className="c-house-main__info-box">
+                        <h5>FOUNDER</h5>
+                        <p>{house.founder}</p>                   
+                    </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
