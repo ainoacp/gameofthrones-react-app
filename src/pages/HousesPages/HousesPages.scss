@@ -5,13 +5,14 @@
 
 .c-houses-header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     // height: 10vh;
 }
 
 .c-houses-main{
     // height: 70vh;
+    padding: 20px 0px;
 }
 
 .c-nav-houses{
