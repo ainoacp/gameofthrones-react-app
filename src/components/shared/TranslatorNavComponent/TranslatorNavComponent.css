@@ -22,16 +22,12 @@
     border-radius: 5px;
     border: none;
 }
+
 .nav-translate{
-<<<<<<< HEAD
     color: white;
     display: flex;
     gap: 20px;
     align-content: stretch;
     flex-direction: row-reverse;
     padding: 40px 40px 0;
-=======
-    color:white;
-    /* background-color: aqua; */
->>>>>>> dev_main
 }

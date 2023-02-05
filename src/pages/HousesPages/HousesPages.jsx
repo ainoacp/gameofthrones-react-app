@@ -49,9 +49,6 @@ export default function HousesPage(){
 
     return (
         <div className="houses-main">
-            <header>
-                <div>Buscador</div>
-            </header>
             <main>
                 <Searcher onSubmit={filterHouses}/>
                 <div className="card-section">

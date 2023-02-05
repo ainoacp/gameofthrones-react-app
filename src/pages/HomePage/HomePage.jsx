@@ -10,16 +10,16 @@ export default function HomePage(){
 
     return (
         <>
-        <div className="container">
-            <TranslatorNavComponent className="translator-nav"></TranslatorNavComponent>
-        
-            <div className="div-title">
-                <h1 className="title">{t("games of thrones")}</h1>
+            <div className="container">
+                <TranslatorNavComponent className="translator-nav"></TranslatorNavComponent>
+            
+                <div className="div-title">
+                    <h1 className="title">{t("games of thrones")}</h1>
+                </div>
+                <div className="nav-component">
+                    <NavComponent/>
+                </div>
             </div>
-            <div className="nav-component">
-                <NavComponent/>
-            </div>
-        </div>
         </>
     )
 }
