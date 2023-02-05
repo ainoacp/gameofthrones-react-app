@@ -2,8 +2,10 @@
     background-color: black;
     height: 100vh;
 }
-
-.simplebar-wrapper{
-    // max-height: 700px;
-    height: 65vh;
+.c-characters-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+.simplebar-wrapper {
+    height: 60vh;

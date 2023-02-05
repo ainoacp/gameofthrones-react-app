@@ -12,3 +12,14 @@
     list-style:none;
     gap:20px;
 }
+
+.c-houses-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.houses-main{
+    background-color: black;
+    height: 100vh;
+}
