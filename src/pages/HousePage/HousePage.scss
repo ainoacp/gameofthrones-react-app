@@ -43,6 +43,19 @@
 
         &-box{
             width: 250px;
+            font-family: "Lato", sans-serif;
+            display: block;
+            h5{
+                font-size: 24px;
+                font-family: "Game of Thrones";
+                font-weight: lighter;
+            }
+
+            p{
+                font-size: 16px;
+                margin-top: 0;
+                color: white;
+            }
         }
     }
 }

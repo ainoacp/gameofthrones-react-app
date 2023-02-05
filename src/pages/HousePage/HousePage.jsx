@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useState,useEffect } from "react";
 import "./HousePage.scss";
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import BackButton from "../../components/shared/BackButton/BackButton";
 import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
 import HomeLink from "../../components/shared/HomeLink/HomeLink";
@@ -36,6 +36,10 @@ export default function HousePage(){
                 </div>
                 <div className="c-house-main__info">
                     <div className="c-house-main__info-box">
+                        <h5>LEMA</h5>
+                        <p>{house.words}</p>
+                    </div>
+                    <div className="c-house-main__info-box">
                         <h5>SEDE</h5>
                         <p>{house.seat}</p>
                     </div>
@@ -45,7 +49,11 @@ export default function HousePage(){
                     </div>
                     <div className="c-house-main__info-box">
                         <h5>CURRENT LORD</h5>
-                        <p>{house.currentLord}</p>                   
+                        <Link to={`/characters/${house.currentLord}`}><p>{house.currentLord}</p></Link>
+                    </div>
+                    <div className="c-house-main__info-box">
+                        <h5>HEIR</h5>
+                        <Link to={`/characters/${house.heir}`}><p>{house.heir}</p></Link>
                     </div>
                     <div className="c-house-main__info-box">
                         <h5>FOUNDER</h5>

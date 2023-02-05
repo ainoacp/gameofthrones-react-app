@@ -15,23 +15,28 @@ export default function CharacterPage() {
     
     const [character, setCharacter] = useState([]);
     const [houseName, setHouseName] = useState([]);
+    const [done, setDone] = useState(false);
 
     const getCharacter = async () => {
         const res = await axios.get(`https://api.got.show/api/show/characters/${name}`);
         console.log(res.data)
         setCharacter(res.data);
-        let houseName = character.house;
-        // getBadge(houseName);
+        const house = character.house;
+        return house;
     }
+    
     const getBadge = async (houseName) => {
         const res = await axios.get(`https://api.got.show/api/book/houses/${houseName}`);
-        console.log(res.data)
         setHouseName(res.data[0]);
     }
+
     useEffect(() => { 
-        getCharacter();
-        // getBadge();
-    }, [houseName]);
+        getCharacter().then((house) => getBadge(house)).then(()=>{
+            setDone(true);
+        });
+    }, [done,name]);
+    //Variable done para que cuando se ejecuten las funciones vuelva a cargar la página
+    //Ponemos también name para que cuando cambie el parametro de name de la url se ejecute la funcion otra vez
 
     return (
         <div className="c-character-page">
@@ -56,13 +61,13 @@ export default function CharacterPage() {
                     <div className="ch-info-container">
                         <h5>ALIANZAS</h5>
                         <SimpleBar style={{ maxHeight: 130}}>
-                            {character?.allegiances?.map((item) => (<p>{item}</p>))}
+                            {character?.allegiances?.map((item,index) => (<Link key={index} to={`/houses/${item}`}>{item}</Link>))}
                         </SimpleBar> 
                     </div>
                     <div className="ch-info-container">
                         <h5>APARICIONES</h5>
                         <SimpleBar style={{ maxHeight: 130}}>
-                            {character?.appearances?.map((item) => (<p>{item}</p>))} 
+                            {character?.appearances?.map((item,index) => (<p key={index}>{item}</p>))} 
                         </SimpleBar>                
                     </div>
                     <div className="ch-info-container">
@@ -73,13 +78,13 @@ export default function CharacterPage() {
                     <div className="ch-info-container">
                         <h5>HERMANOS</h5>
                         <SimpleBar style={{ maxHeight: 130 }}>
-                            {character?.siblings?.map((item) => (<Link to={`/characters/${item}`}>{item}</Link>))}
+                            {character?.siblings?.map((item,index) => (<Link key={index} to={`/characters/${item}`}>{item}</Link>))}
                         </SimpleBar>
                     </div>
                     <div className="ch-info-container">
                         <h5>TITULOS</h5>
                         <SimpleBar style={{ maxHeight: 130 }}>
-                        {character?.titles?.map((item) => (<p>{item}</p>))}
+                        {character?.titles?.map((item,index) => (<p key={index}>{item}</p>))}
                         </SimpleBar>  
                     </div>
                 </div>
