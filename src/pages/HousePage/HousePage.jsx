@@ -4,6 +4,7 @@ import { useState,useEffect } from "react";
 import "./HousePage.scss";
 import { useParams } from 'react-router-dom';
 import BackButton from "../../components/shared/BackButton/BackButton";
+import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
 
 export default function HousePage(){
 
@@ -14,15 +15,18 @@ export default function HousePage(){
     useEffect(() => {
         async function getHouse(){
             const res = await axios.get(`https://api.got.show/api/book/houses/${name}`);
-            console.log(res.data)
             setHouse(res.data[0]);
+            console.log(res.data[0])
         }
         getHouse();
     }, []);
 
     return (
         <div className="main">
-            <BackButton></BackButton>
+            <div className="header-house"> 
+                <BackButton></BackButton>
+                <TranslatorNavComponent/> 
+            </div>
             <div className="logo-section">
                 <img alt="logo" src={house.image}/>
                 <h3>{house.name}</h3>
@@ -41,12 +45,12 @@ export default function HousePage(){
                     <p>{house.region}</p>                   
                 </div>
                 <div className="info-container">
-                    <h5>ALIANZAS</h5>
-                    <p>{house?.allegiance?.map((item) => (<p>{item}</p>))}</p>
+                    <h5>CURRENT LORD</h5>
+                    <p>{house.currentLord}</p>                   
                 </div>
                 <div className="info-container">
-                    <h5>RELIGIONES</h5>
-                    <p>{house?.religion?.map((item) => (<p>{item}</p>))}</p>  
+                    <h5>FOUNDER</h5>
+                    <p>{house.founder}</p>                   
                 </div>
             </div>
         </div>

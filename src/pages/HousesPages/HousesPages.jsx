@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import NavComponent from "../../components/shared/NavComponent/NavComponent";
+import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
 import "./HousesPages.scss";
 import HouseCard from "./components/HouseCard/HouseCard";
 import { Link } from "react-router-dom";
 import Searcher from "../../components/shared/Searcher/Searcher";
+import SimpleBar from 'simplebar-react';
 
 export default function HousesPage(){
     
@@ -49,19 +51,26 @@ export default function HousesPage(){
 
     return (
         <div className="houses-main">
-            <main>
+            <div className="header-houses">
                 <Searcher onSubmit={filterHouses}/>
-                <div className="card-section">
-                    <ul className="card-list">
+                <div className="header-houses-lang">
+                    <TranslatorNavComponent/> 
+                </div>
+            </div>
+            <div className="card-section">
+                <SimpleBar style={{ maxHeight: 800, marginRight: 20}}>
+                    <ul className="card-list"> 
                         {filteredHouses.map((house)=> (
                             <Link key={house._id} to={`/houses/${house.name}`}>
                                 <HouseCard house={house}/>
                             </Link>
                         ))}
                     </ul>
-                </div>
-            </main>
-            <NavComponent/>
+                </SimpleBar>
+            </div>
+            <div className="nav-houses">
+                <NavComponent className="searcher-hoouses"/>
+            </div>
         </div>
     )
 }

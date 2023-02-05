@@ -22,9 +22,9 @@ export default function BackButton(){
 
     return (
         <>
-            <img alt="back" src="./back.png"></img>
             <div className="back-button-container">
                 <Link to={prevUrl}>
+                    <img alt="back" src="./images/back.png"/>
                     <button> Volver</button>
                 </Link>
             </div>
