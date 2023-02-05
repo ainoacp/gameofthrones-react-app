@@ -1,7 +1,6 @@
 .back-button-container{
     background-color: black;
     width: 100vw;
-    height: 100vh;
     display: flex;
     padding: 20px;
     padding-left: 80px;
@@ -16,5 +15,11 @@
         background-color: inherit;
         color:white;
         font-size: large;
+    }
+
+    img{
+        width: 30px;
+        height: 30px;
+        padding: 2px;
     }
 }

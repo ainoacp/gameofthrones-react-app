@@ -31,9 +31,13 @@ export default function CharactersPage(){
                 <HomeLink/>
                 <TranslatorNavComponent/>
             </div>
-            <Searcher onSubmit={filterCharacters}/>
-            <GalleryCharacters characters={filteredCharacters}/>
-            <NavComponent/>
+            <div className="c-characters-main">
+                <Searcher onSubmit={filterCharacters}/>
+                <GalleryCharacters characters={filteredCharacters}/>
+            </div>
+            <div className="c-characters-footer">
+                <NavComponent/>
+            </div>
         </div>
     )
 } 
