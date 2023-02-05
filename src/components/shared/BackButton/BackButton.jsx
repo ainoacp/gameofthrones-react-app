@@ -23,7 +23,7 @@ export default function BackButton(){
     return (
         <div className="back-button-container">
             <Link to={prevUrl}>
-                <button> Volver</button>
+                <button> ← Volver</button>
             </Link>
         </div>
     )

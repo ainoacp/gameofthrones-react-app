@@ -1,5 +1,9 @@
 .back-button-container{
     background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding: 20px;
 
     button{
         color: inherit;
