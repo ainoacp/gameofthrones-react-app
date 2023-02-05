@@ -22,11 +22,11 @@
     color:white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 
-    &__shield-section{
+    &__shield{
         // height: 250px;
-        padding: 30px 0px;
+        // padding: 30px 0px;
     
         img{
             width: 200px;
@@ -37,8 +37,9 @@
 
     &__info{
         display: flex;
-        justify-content: space-around;
-        margin: 0px 100px;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px 100px;
 
         &-box{
             width: 250px;

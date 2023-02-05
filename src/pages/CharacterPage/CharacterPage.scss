@@ -1,9 +1,13 @@
+.c-character-page{
+    height: 100vh;
+    background-color: black;
+}
+
 .c-character-header{
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        height: 10vh;
-        background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 15%;
         
     .back-button-container{
         font-family: "Lato", sans-serif;
@@ -11,34 +15,46 @@
 }
 
 .ch-main{
-    max-height: 90vh;
-    background-color: black;
+    height: 85%;
     color:white;
-    padding: 10vh;
-    padding-top: 5vh;
-    display: block;
+    padding: 0px 10vh;
+    // padding-top: 5vh;
+    // display: block;
 }
 
 .ch-img-section{
     display: block;
-    max-height: 410px;
+    // max-height: 410px;
+    height: 50%;
 
     img{
         width: 250px;
-        height: 320px;
+        height: 80%;
         object-fit: fill;
     }
 
-    h3{
-        font-size: 36px;
-        text-transform: uppercase;
-        font-family: "Game of Thrones";
-        font-weight: lighter;
+    &__name-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h3{
+            height: 20%;
+            margin: 0px;
+    
+            font-size: 36px;
+            text-transform: uppercase;
+            font-family: "Game of Thrones";
+            font-weight: lighter;
+        }
     }
     
 }
 
 .ch-info-section{
+    height: 50%;
+    // padding:20px 0px;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -47,8 +63,8 @@
 
 .ch-info-container{
     width: 250px;
+    height: max-content;
     font-family: "Lato", sans-serif;
-    display: block;
 
     h5{
         font-size: 24px;
@@ -70,7 +86,7 @@
 
     img{
         width: 160px;
-        height: 192px;
+        height: 100%;
     }
 }
 
@@ -87,6 +103,6 @@
         max-height: 230px;
     }
 }
-.simplebar-wrapper {
-    height: 20vh;
+.simplebar-content {
+    height: 10vh;
 }

@@ -21,7 +21,7 @@ export default function CharacterPage() {
         console.log(res.data)
         setCharacter(res.data);
         let houseName = character.house;
-        getBadge(houseName);
+        // getBadge(houseName);
     }
     const getBadge = async (houseName) => {
         const res = await axios.get(`https://api.got.show/api/book/houses/${houseName}`);
@@ -34,7 +34,7 @@ export default function CharacterPage() {
     }, [houseName]);
 
     return (
-        <>
+        <div className="c-character-page">
             <div className="c-character-header">
                 <BackButton/>
                 <HomeLink/>
@@ -43,7 +43,9 @@ export default function CharacterPage() {
             <div className="ch-main">
                 <div className="ch-img-section">
                     <img alt="img" src={character?.image}/>
-                    <h3>{character?.name}</h3>
+                    <div className="ch-img-section__name-container">
+                        <h3>{character?.name}</h3>
+                    </div>
                 </div>
                 <div className="ch-info-section">
                     <div className="ch-info-container">
@@ -53,13 +55,13 @@ export default function CharacterPage() {
                     </div>
                     <div className="ch-info-container">
                         <h5>ALIANZAS</h5>
-                        <SimpleBar style={{ maxHeight: 230}}>
+                        <SimpleBar style={{ maxHeight: 130}}>
                             {character?.allegiances?.map((item) => (<p>{item}</p>))}
                         </SimpleBar> 
                     </div>
                     <div className="ch-info-container">
                         <h5>APARICIONES</h5>
-                        <SimpleBar style={{ maxHeight: 230}}>
+                        <SimpleBar style={{ maxHeight: 130}}>
                             {character?.appearances?.map((item) => (<p>{item}</p>))} 
                         </SimpleBar>                
                     </div>
@@ -70,18 +72,18 @@ export default function CharacterPage() {
                     </div>
                     <div className="ch-info-container">
                         <h5>HERMANOS</h5>
-                        <SimpleBar style={{ maxHeight: 230 }}>
+                        <SimpleBar style={{ maxHeight: 130 }}>
                             {character?.siblings?.map((item) => (<Link to={`/characters/${item}`}>{item}</Link>))}
                         </SimpleBar>
                     </div>
                     <div className="ch-info-container">
                         <h5>TITULOS</h5>
-                        <SimpleBar style={{ maxHeight: 230 }}>
+                        <SimpleBar style={{ maxHeight: 130 }}>
                         {character?.titles?.map((item) => (<p>{item}</p>))}
                         </SimpleBar>  
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
