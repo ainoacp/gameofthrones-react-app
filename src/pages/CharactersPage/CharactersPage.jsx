@@ -3,9 +3,10 @@ import './CharactersPage.scss'
 import { useEffect, useState } from "react";
 import GalleryCharacters from "../../components/shared/GalleryCharacters/GalleryCharacters";
 import NavComponent from "../../components/shared/NavComponent/NavComponent";
-import CharactersSearcher from "../../components/shared/CharactersSearcher/CharactersSearcher";
 import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
 // import HouseLink from "../../components/shared/HouseLink/HouseLink";
+import Searcher from "../../components/shared/Searcher/Searcher";
+
 
 export default function CharactersPage(){
 
@@ -27,8 +28,7 @@ export default function CharactersPage(){
     return (
         <div className="c-characters-page">
             <TranslatorNavComponent/>
-            {/* <HouseLink/> */}
-            <CharactersSearcher onSubmit={filterCharacters}/>
+            <Searcher onSubmit={filterCharacters}/>
             <GalleryCharacters characters={filteredCharacters}/>
             <NavComponent/>
         </div>
