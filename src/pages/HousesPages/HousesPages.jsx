@@ -5,6 +5,8 @@ import "./HousesPages.scss";
 import HouseCard from "./components/HouseCard/HouseCard";
 import { Link } from "react-router-dom";
 import Searcher from "../../components/shared/Searcher/Searcher";
+import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
+import HomeLink from "../../components/shared/HomeLink/HomeLink";
 
 export default function HousesPage(){
     
@@ -49,6 +51,10 @@ export default function HousesPage(){
 
     return (
         <div className="houses-main">
+            <div className="c-houses-header">
+                    <HomeLink/>
+                    <TranslatorNavComponent/>
+            </div>
             <main>
                 <Searcher onSubmit={filterHouses}/>
                 <div className="card-section">

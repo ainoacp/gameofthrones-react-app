@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import BackButton from "../../components/shared/BackButton/BackButton";
-import '../../components/shared/TranslatorNavComponent/TranslatorNavComponent';
-// import '../../components/shared/HouseLink/HouseLink';
+import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
+import HomeLink from "../../components/shared/HomeLink/HomeLink";
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 
@@ -35,10 +35,10 @@ export default function CharacterPage() {
 
     return (
         <>
-            <div className="ch-header">
-                <BackButton></BackButton>
-                {/* <HouseLink/>
-                <TranslatorNavComponent/> */}
+            <div className="c-character-header">
+                <BackButton/>
+                <HomeLink/>
+                <TranslatorNavComponent/>
             </div>
             <div className="ch-main">
                 <div className="ch-img-section">

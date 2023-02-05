@@ -4,7 +4,7 @@
 // import NavComponent from '../../components/shared/NavComponent/NavComponent'
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ChronologyGallery from "../ChronologyGallery/ChronologyGallery";
+import ChronologyGallery from "../../components/shared/ChronologyGallery/ChronologyGallery";
 
 export default function CronologyPage(){
     const [characters, setCharacters] = useState([])
