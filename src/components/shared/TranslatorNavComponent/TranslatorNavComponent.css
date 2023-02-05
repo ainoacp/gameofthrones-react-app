@@ -1,0 +1,33 @@
+/* .cont-button{
+    background-image: url("https://d1bvpoagx8hqbg.cloudfront.net/originals/bandera-espana-224c725f1e6eaac8ff319d60bae7127f.jpg");
+    background-size: cover; 
+} */
+.button1{
+    width: 6vw;
+    height: 7vh;
+    background-image: url("https://d1bvpoagx8hqbg.cloudfront.net/originals/bandera-espana-224c725f1e6eaac8ff319d60bae7127f.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    border: none;
+}
+.button2{
+    width: 6vw;
+    height: 7vh;
+    background-image: url("https://static8.depositphotos.com/1518767/1030/i/950/depositphotos_10307320-stock-photo-uk-flag.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    border: none;
+}
+
+.nav-translate{
+    color: white;
+    display: flex;
+    gap: 20px;
+    align-content: stretch;
+    flex-direction: row-reverse;
+    padding: 40px 40px 0;
+}

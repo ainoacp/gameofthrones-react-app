@@ -14,6 +14,7 @@ export default function HousePage(){
     useEffect(() => {
         async function getHouse(){
             const res = await axios.get(`https://api.got.show/api/book/houses/${name}`);
+            console.log(res.data)
             setHouse(res.data[0]);
         }
         getHouse();

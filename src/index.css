@@ -1,8 +1,20 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap'); */
+/* @import url('https://db.onlinewebfonts.com/c/97c4b25dc74e0ab045154e75a8fdd69d?family=Game+of+Thrones'); */
+/* @import url('./assets/Game\ of\ Thrones.ttf'); */
+@font-face {
+  font-family: 'GamesOfThrones';
+  src: url('./assets/Game\ of\ Thrones.ttf');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    /* font-family: 'Cinzel Decorative', cursive; */
+    /* font-family: "Game of Thrones";  */
+    font-family: "GamesOfThrones"; 
+    /* font-weight: lighter; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
