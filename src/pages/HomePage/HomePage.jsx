@@ -6,7 +6,7 @@ import { Context } from "../../context/Context";
 import "./HomePage.css"
 
 export default function HomePage(){
-    const {t} = useContext(Context)
+    const {t} = useContext(Context);
 
     return (
         <>
