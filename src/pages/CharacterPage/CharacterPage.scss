@@ -1,0 +1,83 @@
+.ch-header{
+    display: flex;
+    height: 10vh;
+    align-items: flex-start;
+    .back-button-container{
+        padding: 50px 20px 20px 50px; 
+    }
+}
+
+.ch-main{
+    max-height: 90vh;
+    background-color: black;
+    color:white;
+    padding: 10vh;
+    padding-top: 5vh;
+    display: block;
+}
+
+.ch-img-section{
+    display: block;
+    max-height: 410px;
+
+    img{
+        width: 250px;
+        height: 320px;
+        object-fit: fill;
+    }
+
+    h3{
+        font-size: 36px;
+        text-transform: uppercase;
+        font-family: "Game of Thrones";
+        font-weight: lighter;
+    }
+    
+}
+
+.ch-info-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ch-info-container{
+    width: 250px;
+    font-family: "Lato", sans-serif;
+    display: block;
+    h5{
+        font-size: 24px;
+        font-family: "Game of Thrones";
+        font-weight: lighter;
+    }
+
+    p{
+        font-size: 16px;
+        margin-top: 0;
+    }
+    a{
+        font-size: 16px;
+        display: block;
+        padding: 8px;
+    }
+
+    img{
+        width: 160px;
+        height: 192px;
+    }
+}
+
+.simplebar-scrollable-y{
+    .simplebar-track.simplebar-vertical{
+        width: 3px;
+        background-color: #f6f6f65c;
+    }
+}
+.simplebar-scrollbar{
+    background-color: rgb(255, 255, 255);
+    max-height: 25px;
+    .simplebar-scrollbar::before {
+        max-height: 230
+    }
+}

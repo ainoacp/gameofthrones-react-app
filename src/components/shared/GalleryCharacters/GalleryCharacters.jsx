@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import './GalleryCharacters.scss'
+import SimpleBar from 'simplebar-react';
+
+
 export default function GalleryCharacters({characters}) {
     return (
-        <div className="gallery">
+        <SimpleBar style={{ maxHeight: 800, marginRight: 100}}>
+            <div className="gallery">
             {characters.map((character) => (
             <figure character={character} key={character._id} className="card">
                 <img src={character.image} alt={character.name}/>
@@ -13,5 +17,7 @@ export default function GalleryCharacters({characters}) {
                 </figcaption>
             </figure>))}
         </div>
+        </SimpleBar>
+        
     )
 }

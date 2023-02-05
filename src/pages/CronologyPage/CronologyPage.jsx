@@ -1,3 +1,7 @@
+// import '../../components/shared/NavComponent/NavComponent'
+// import '../../components/shared/TranslatorNavComponent/TranslatorNavComponent'
+// import '../../components/shared/HouseLink/HouseLink'
+// import NavComponent from '../../components/shared/NavComponent/NavComponent'
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ChronologyGallery from "../ChronologyGallery/ChronologyGallery";

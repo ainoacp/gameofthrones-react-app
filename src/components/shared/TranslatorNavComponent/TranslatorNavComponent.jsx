@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useContext } from "react";
 import { Context } from "../../../context/Context";
 import "./TranslatorNavComponent.css"
@@ -19,5 +18,4 @@ const TranslatorNavComponent = () => {
 };
 
 export default TranslatorNavComponent;
-=======
->>>>>>> dev_main
+
