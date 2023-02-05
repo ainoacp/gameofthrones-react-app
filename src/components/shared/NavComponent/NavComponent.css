@@ -1,8 +1,11 @@
-a{
+.nav-component{
+    display: flex;
+}
+
+.c-nav-link{
     color: white;
     text-decoration: none;
     font-size: 25px;
     text-transform: uppercase;
     font-family: 'GamesOfThrones';
-    
 }
