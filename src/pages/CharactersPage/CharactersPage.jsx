@@ -30,7 +30,6 @@ export default function CharactersPage(){
             <TranslatorNavComponent/>
             <Searcher onSubmit={filterCharacters}/>
             <GalleryCharacters characters={filteredCharacters}/>
-            <NavComponent/>
         </div>
     )
 } 
