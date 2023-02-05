@@ -1,0 +1,14 @@
+.card-section{
+    min-height: 80vh;
+    background-color: black;
+    padding: 50px 100px;
+}
+
+.card-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style:none;
+    gap:20px;
+}
