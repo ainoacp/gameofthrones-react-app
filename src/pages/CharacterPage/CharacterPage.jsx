@@ -14,29 +14,25 @@ export default function CharacterPage() {
     let { name } = useParams();
     
     const [character, setCharacter] = useState([]);
-    const [houseName, setHouseName] = useState([]);
-    const [done, setDone] = useState(false);
+    const [house, setHouse] = useState([]);
 
     const getCharacter = async () => {
         const res = await axios.get(`https://api.got.show/api/show/characters/${name}`);
-        console.log(res.data)
+        // console.log(res.data)
         setCharacter(res.data);
-        const house = character.house;
-        return house;
+        getBadge(res.data.house);
     }
     
-    const getBadge = async (houseName) => {
-        const res = await axios.get(`https://api.got.show/api/book/houses/${houseName}`);
-        setHouseName(res.data[0]);
+    const getBadge = async (house) => {
+        const res = await axios.get(`https://api.got.show/api/book/houses/${house}`);
+        // console.log(res.data[0].image);
+        setHouse(res.data[0]);
     }
 
     useEffect(() => { 
-        getCharacter().then((house) => getBadge(house)).then(()=>{
-            setDone(true);
-        });
-    }, [done, name]);
-    //Variable done para que cuando se ejecuten las funciones vuelva a cargar la página
-    //Ponemos también name para que cuando cambie el parametro de name de la url se ejecute la funcion otra vez
+        getCharacter();
+    }, [name]);
+    //Ponemos name para que cuando cambie el parametro de name de la url se ejecute la funcion otra vez
 
     return (
         <div className="c-character-page">
@@ -55,8 +51,7 @@ export default function CharacterPage() {
                 <div className="ch-info-section">
                     <div className="ch-info-container">
                         <h5>CASA</h5>
-                        <img alt="logo" src={houseName?.image}/> 
-                        {/* FUNCIONA PERO HACE UNA PETICIÓN INFINITA, cómo puedo hacer para que al ver character.house vaya a houses y coja la imagen? */}
+                        <img alt="logo" src={house?.image}/> 
                     </div>
                     <div className="ch-info-container">
                         <h5>ALIANZAS</h5>
