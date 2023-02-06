@@ -1,0 +1,22 @@
+.c-timeline-page{
+    background-color: black;
+}
+
+.c-timeline-header{
+    height: 5%;
+    width:100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.c-timeline-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    min-height: 100vh;
+    margin: 50px;
+}

@@ -1,0 +1,28 @@
+.c-timeline-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.c-timeline-container::after {
+    background-color: white;
+    content: '';
+    position: absolute;
+    left: calc(50% - 2px);
+    width: 4px;
+    height: 100%;
+}
+
+.circle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: black;
+}
