@@ -55,8 +55,7 @@ export default function CharacterPage() {
                 <div className="ch-info-section">
                     <div className="ch-info-container">
                         <h5>CASA</h5>
-                        <img alt="logo" src={houseName?.image}/> 
-                        {/* FUNCIONA PERO HACE UNA PETICIÓN INFINITA, cómo puedo hacer para que al ver character.house vaya a houses y coja la imagen? */}
+                        <img alt="logo" src={houseName?.image}/>
                     </div>
                     <div className="ch-info-container">
                         <h5>ALIANZAS</h5>

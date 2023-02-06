@@ -4,6 +4,7 @@ import NavComponent from '../../components/shared/NavComponent/NavComponent'
 import axios from "axios";
 import { useEffect, useMemo, useState } from "react";
 import TimelineGallery from "../../components/shared/TimelineGallery/TimelineGallery";
+// import Sorter from "../../components/shared/Sorter/Sorter";
 import './TimelinePage.scss'
 
 export default function TimelinePage() {
@@ -26,15 +27,15 @@ export default function TimelinePage() {
     //     return next.age - prev.age;
     // })
 
-    // const sortAge = async (res) => {
-    //     let result = res.data;
+    // const sortCharacters = async (res) => {
+    //     let result = characters;
     //     if (sort === 'descending') {
-    //         result = [...res.data].sort((a, b) => {
-    //             return b.age.localeCompare(a.age);
+    //         result = [...characters].sort((a, b) => {
+    //             return b.age.age.localeCompare(a.age.age);
     //         });
     //     } else if (sort === "ascending") {
-    //         result = [...res.data].sort((a, b) => {
-    //             return a.age.localeCompare(b.age)
+    //         result = [...characters].sort((a, b) => {
+    //             return a.age.age.localeCompare(b.age.age)
     //         });
     //     }
     //     return result;
@@ -48,6 +49,8 @@ export default function TimelinePage() {
                 <TranslatorNavComponent/>
             </div>
             <div className="c-timeline-main">
+                {/* <Sorter sort={sortCharacters}></Sorter> */}
+                {/* <TimelineGallery characters={sort}></TimelineGallery> */}
                 <TimelineGallery characters={characters}></TimelineGallery>
             </div>
             <div className="c-characters-footer">
