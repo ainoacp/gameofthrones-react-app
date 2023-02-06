@@ -5,7 +5,8 @@ import "./TranslatorNavComponent.css"
 
 const TranslatorNavComponent = () => {
 
-  const {t, changeLanguaje} = useContext(Context)
+  const {t, changeLanguaje} = useContext(Context);
+
   return (
 
     <div className="nav-translate">

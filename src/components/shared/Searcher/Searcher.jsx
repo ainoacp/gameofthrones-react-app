@@ -1,19 +1,16 @@
-import { useForm } from "react-hook-form";
 import './Searcher.scss'
 
-export default function CharactersSearcher({ onSubmit }) {
-    
-    const { register, handleSubmit } = useForm();
+export default function CharactersSearcher({ search }) {
 
-    const submit = ({text}) => {
-        console.log(text)
-        onSubmit(text)
+    const change = (e) => {
+        console.log(e.target.value)
+        search(e.target.value)
     }
     return (
         <div className="form-container">
-            <form className="form" onSubmit={handleSubmit(submit)}>
-                <img alt="lupa" src="./images/lupa.png"></img>
-                <input type="text" {...register("text")} placeholder="Buscar..."/>
+            <form className="form">
+                <img alt="lupa" src="./images/lupa.png"/>
+                <input type="text" onChange={change} placeholder="Buscar..."/>
             </form>
         </div>
     )

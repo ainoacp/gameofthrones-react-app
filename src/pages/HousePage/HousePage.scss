@@ -1,60 +1,66 @@
+.c-house-page{
+    background-color: black;
+    height: 100vh;
+}
+
 .c-house-header{
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    height: 10vh;
     background-color: black;
+    height: 10%;
+
     .back-button-container{
         font-family: "Lato", sans-serif;
     }
 }
-.main{
-    height: 90vh;
+
+.c-house-main{
+    // min-height: 40vh;
     background-color: black;
+    height: 90%;
     color:white;
-    padding: 10vh;
-    padding-top: 5vh;
-    display: block;
-}
-
-.logo-section{
-    display: block;
-    max-height: 410px;
-
-    h3{
-        font-size: 36px;
-        font-weight: lighter;
-    }
-    img{
-        width: 200px;
-        height: 220px;
-        object-fit: fill;
-    }
-}
-
-.info-section{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+
+    &__shield{
+        // height: 250px;
+        // padding: 30px 0px;
+    
+        img{
+            width: 200px;
+            height: 220px;
+            object-fit: fill;
+        }
+    }
+
+    &__info{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px 100px;
+
+        &-box{
+            width: 250px;
+            font-family: "Lato", sans-serif;
+            display: block;
+            h5{
+                font-size: 24px;
+                font-family: "Game of Thrones";
+                font-weight: lighter;
+            }
+
+            p{
+                font-size: 16px;
+                margin-top: 0;
+                color: white;
+            }
+        }
+    }
 }
 
-.info-container{
-    width: 250px;
-    font-family: "Lato", sans-serif;
-    display: block;
-    h5{
-        font-size: 24px;
-        font-family: "Game of Thrones";
-        font-weight: lighter;
-    }
 
-    p{
-        font-size: 16px;
-        margin-top: 0;
-    }
-    img{
-        width: 160px;
-        height: 192px;
-    }
-}
+
+
+

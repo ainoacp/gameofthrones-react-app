@@ -15,26 +15,31 @@ export default function CharacterPage() {
     
     const [character, setCharacter] = useState([]);
     const [houseName, setHouseName] = useState([]);
+    const [done, setDone] = useState(false);
 
     const getCharacter = async () => {
         const res = await axios.get(`https://api.got.show/api/show/characters/${name}`);
         console.log(res.data)
         setCharacter(res.data);
-        let houseName = character.house;
-        getBadge(houseName);
+        const house = character.house;
+        return house;
     }
+    
     const getBadge = async (houseName) => {
         const res = await axios.get(`https://api.got.show/api/book/houses/${houseName}`);
-        console.log(res.data)
         setHouseName(res.data[0]);
     }
+
     useEffect(() => { 
-        getCharacter();
-        // getBadge();
-    }, [houseName]);
+        getCharacter().then((house) => getBadge(house)).then(()=>{
+            setDone(true);
+        });
+    }, [done, name]);
+    //Variable done para que cuando se ejecuten las funciones vuelva a cargar la página
+    //Ponemos también name para que cuando cambie el parametro de name de la url se ejecute la funcion otra vez
 
     return (
-        <>
+        <div className="c-character-page">
             <div className="c-character-header">
                 <BackButton/>
                 <HomeLink/>
@@ -43,7 +48,9 @@ export default function CharacterPage() {
             <div className="ch-main">
                 <div className="ch-img-section">
                     <img alt="img" src={character?.image}/>
-                    <h3>{character?.name}</h3>
+                    <div className="ch-img-section__name-container">
+                        <h3>{character?.name}</h3>
+                    </div>
                 </div>
                 <div className="ch-info-section">
                     <div className="ch-info-container">
@@ -53,14 +60,14 @@ export default function CharacterPage() {
                     </div>
                     <div className="ch-info-container">
                         <h5>ALIANZAS</h5>
-                        <SimpleBar style={{ maxHeight: 230}}>
-                            {character?.allegiances?.map((item) => (<p>{item}</p>))}
+                        <SimpleBar style={{ maxHeight: 130}}>
+                            {character?.allegiances?.map((item,index) => (<Link key={index} to={`/houses/${item}`}>{item}</Link>))}
                         </SimpleBar> 
                     </div>
                     <div className="ch-info-container">
                         <h5>APARICIONES</h5>
-                        <SimpleBar style={{ maxHeight: 230}}>
-                            {character?.appearances?.map((item) => (<p>{item}</p>))} 
+                        <SimpleBar style={{ maxHeight: 130}}>
+                            {character?.appearances?.map((item,index) => (<p key={index}>{item}</p>))} 
                         </SimpleBar>                
                     </div>
                     <div className="ch-info-container">
@@ -70,18 +77,18 @@ export default function CharacterPage() {
                     </div>
                     <div className="ch-info-container">
                         <h5>HERMANOS</h5>
-                        <SimpleBar style={{ maxHeight: 230 }}>
-                            {character?.siblings?.map((item) => (<Link to={`/characters/${item}`}>{item}</Link>))}
+                        <SimpleBar style={{ maxHeight: 130 }}>
+                            {character?.siblings?.map((item,index) => (<Link key={index} to={`/characters/${item}`}>{item}</Link>))}
                         </SimpleBar>
                     </div>
                     <div className="ch-info-container">
                         <h5>TITULOS</h5>
-                        <SimpleBar style={{ maxHeight: 230 }}>
-                        {character?.titles?.map((item) => (<p>{item}</p>))}
+                        <SimpleBar style={{ maxHeight: 130 }}>
+                        {character?.titles?.map((item,index) => (<p key={index}>{item}</p>))}
                         </SimpleBar>  
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

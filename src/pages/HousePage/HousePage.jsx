@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useState,useEffect } from "react";
 import "./HousePage.scss";
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import BackButton from "../../components/shared/BackButton/BackButton";
 import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
 import HomeLink from "../../components/shared/HomeLink/HomeLink";
@@ -16,47 +16,51 @@ export default function HousePage(){
     useEffect(() => {
         async function getHouse(){
             const res = await axios.get(`https://api.got.show/api/book/houses/${name}`);
-            console.log(res.data)
             setHouse(res.data[0]);
+            console.log(res.data[0])
         }
         getHouse();
     }, []);
 
     return (
-        <>
+        <div className="c-house-page">
             <div className="c-house-header">
                     <BackButton/>
                     <HomeLink/>
                     <TranslatorNavComponent/>
             </div>
-            <div className="main">
-                <div className="logo-section">
+            <div className="c-house-main">
+                <div className="c-house-main__shield">
                     <img alt="logo" src={house.image}/>
                     <h3>{house.name}</h3>
                 </div>
-                <div className="info-section">
-                    <div className="info-container">
+                <div className="c-house-main__info">
+                    <div className="c-house-main__info-box">
                         <h5>LEMA</h5>
                         <p>{house.words}</p>
                     </div>
-                    <div className="info-container">
+                    <div className="c-house-main__info-box">
                         <h5>SEDE</h5>
                         <p>{house.seat}</p>
                     </div>
-                    <div className="info-container">
+                    <div className="c-house-main__info-box">
                         <h5>REGION</h5>
                         <p>{house.region}</p>                   
                     </div>
-                    <div className="info-container">
-                        <h5>ALIANZAS</h5>
-                        <p>{house?.allegiance?.map((item) => (<p>{item}</p>))}</p>
+                    <div className="c-house-main__info-box">
+                        <h5>CURRENT LORD</h5>
+                        <Link to={`/characters/${house.currentLord}`}><p>{house.currentLord}</p></Link>
                     </div>
-                    <div className="info-container">
-                        <h5>RELIGIONES</h5>
-                        <p>{house?.religion?.map((item) => (<p>{item}</p>))}</p>  
+                    <div className="c-house-main__info-box">
+                        <h5>HEIR</h5>
+                        <Link to={`/characters/${house.heir}`}><p>{house.heir}</p></Link>
+                    </div>
+                    <div className="c-house-main__info-box">
+                        <h5>FOUNDER</h5>
+                        <p>{house.founder}</p>                   
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
