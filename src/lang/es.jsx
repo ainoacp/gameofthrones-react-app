@@ -5,5 +5,4 @@ export const es = {
     "cronology": "cronologia",
     "houses": "casas",
     "games of thrones": "juego de tronos",
-   
 }

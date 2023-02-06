@@ -32,7 +32,7 @@ export default function CharactersPage(){
                 <TranslatorNavComponent/>
             </div>
             <div className="c-characters-main">
-                <Searcher onSubmit={filterCharacters}/>
+                <Searcher search={filterCharacters}/>
                 <GalleryCharacters characters={filteredCharacters}/>
             </div>
             <div className="c-characters-footer">

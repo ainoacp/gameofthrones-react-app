@@ -34,7 +34,7 @@ export default function CharacterPage() {
         getCharacter().then((house) => getBadge(house)).then(()=>{
             setDone(true);
         });
-    }, [done,name]);
+    }, [done, name]);
     //Variable done para que cuando se ejecuten las funciones vuelva a cargar la página
     //Ponemos también name para que cuando cambie el parametro de name de la url se ejecute la funcion otra vez
 
