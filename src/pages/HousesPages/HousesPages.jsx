@@ -39,14 +39,18 @@ export default function HousesPage(){
     return (
         <div className="c-houses-page">
             <div className="c-houses-header">
-                <Searcher onSubmit={filterHouses}/>
-                <HomeLink/>
-                <TranslatorNavComponent/>
+                <div className="c-houses-form-container">
+                    <Searcher onSubmit={filterHouses}/>
+                </div>
+                <div className="c-houses-buttons">
+                    <HomeLink/>
+                    <TranslatorNavComponent/>
+                </div>
             </div>
             <div className="c-houses-main">
                 <GalleryHouses houses={filteredHouses}/>
             </div>
-            <div className="c-nav-houses">
+            <div className="c-footer-houses">
                 <NavComponent/>
             </div>
         </div>

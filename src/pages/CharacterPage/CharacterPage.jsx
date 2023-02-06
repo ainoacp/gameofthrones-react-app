@@ -37,9 +37,11 @@ export default function CharacterPage() {
     return (
         <div className="c-character-page">
             <div className="c-character-header">
-                <BackButton/>
-                <HomeLink/>
-                <TranslatorNavComponent/>
+                    <BackButton/>
+                <div className="c-character-buttons">
+                    <HomeLink/>
+                    <TranslatorNavComponent/>
+                </div>
             </div>
             <div className="ch-main">
                 <div className="ch-img-section">

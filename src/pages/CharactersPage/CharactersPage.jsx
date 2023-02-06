@@ -28,11 +28,15 @@ export default function CharactersPage(){
     return (
         <div className="c-characters-page">
             <div className="c-characters-header">
-                <HomeLink/>
-                <TranslatorNavComponent/>
+                <div className="c-characters-form-container">
+                    <Searcher onSubmit={filterCharacters}/>
+                </div>
+                <div className="c-characters-buttons">
+                    <HomeLink/>
+                    <TranslatorNavComponent/>
+                </div>
             </div>
             <div className="c-characters-main">
-                <Searcher search={filterCharacters}/>
                 <GalleryCharacters characters={filteredCharacters}/>
             </div>
             <div className="c-characters-footer">

@@ -11,7 +11,9 @@ export default function HomePage(){
     return (
         <div className="c-home-container">
             <div className="c-home-header">
-                <TranslatorNavComponent/>
+                <div className="c-home-buttons">
+                    <TranslatorNavComponent/>
+                </div>
             </div>
             
             <div className="c-div-title">

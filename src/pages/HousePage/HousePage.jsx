@@ -26,8 +26,10 @@ export default function HousePage(){
         <div className="c-house-page">
             <div className="c-house-header">
                     <BackButton/>
+                <div className="c-house-buttons">
                     <HomeLink/>
                     <TranslatorNavComponent/>
+                </div>
             </div>
             <div className="c-house-main">
                 <div className="c-house-main__shield">
