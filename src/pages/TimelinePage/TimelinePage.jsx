@@ -35,28 +35,6 @@ export default function TimelinePage() {
         
         return sortedCharacters;
     }
-    // const sorting = [...characters].sort((characterOlder, characterYoungest) => {
-    //     return characterYoungest[sort] - characterOlder[sort]});
-
-    // const sorting = characters
-    //     .filter(character => character.age && character.age.age)
-    //     .sort((prev, next) => {
-    //     return next.age - prev.age;
-    // })
-
-    // const sortCharacters = async (res) => {
-    //     let result = characters;
-    //     if (sort === 'descending') {
-    //         result = [...characters].sort((a, b) => {
-    //             return b.age.age.localeCompare(a.age.age);
-    //         });
-    //     } else if (sort === "ascending") {
-    //         result = [...characters].sort((a, b) => {
-    //             return a.age.age.localeCompare(b.age.age)
-    //         });
-    //     }
-    //     return result;
-    // };
 
     useEffect(() => {
         getCharacters()
@@ -72,7 +50,6 @@ export default function TimelinePage() {
             </div>
             <div className="c-timeline-main">
                 <Sorter setSort={setSort} sort={sort} age={age}></Sorter>
-                {/* <TimelineGallery characters={sort}></TimelineGallery> */}
                 <TimelineGallery characters={characters}></TimelineGallery>
             </div>
             <div className="c-characters-footer">
