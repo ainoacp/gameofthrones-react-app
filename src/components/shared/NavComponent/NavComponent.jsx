@@ -10,7 +10,7 @@ export default function NavComponent(){
     {/* traerme la key de la traducción */}
         <Link to="/characters" className="nav-link">{t("characters")}</Link>
         <Link to="/houses" className="nav-link">{t("houses")}</Link>
-        <Link to="/cronology" className="nav-link">{t("cronology")}</Link>
+        <Link to="/timeline" className="nav-link">{t("cronology")}</Link>
     </div>
     )
 }

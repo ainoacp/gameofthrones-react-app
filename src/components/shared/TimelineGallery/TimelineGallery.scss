@@ -1,0 +1,15 @@
+.c-timeline-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.c-timeline-container::after {
+    background-color: white;
+    content: '';
+    position: absolute;
+    left: calc(50% - 2px);
+    width: 4px;
+    height: 100%;
+}
+

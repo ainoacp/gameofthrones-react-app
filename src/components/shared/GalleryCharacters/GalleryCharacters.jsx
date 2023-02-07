@@ -16,6 +16,5 @@ export default function GalleryCharacters({characters}) {
             </figure>))}
         </div>
         </SimpleBar>
-        
     )
 }
