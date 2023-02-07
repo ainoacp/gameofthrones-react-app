@@ -5,7 +5,7 @@ import SimpleBar from 'simplebar-react';
 
 export default function GalleryCharacters({characters}) {
     return (
-        <SimpleBar style={{ maxHeight: 800}}>
+        <SimpleBar style={{ maxHeight: 800, marginRight: '200px'}}>
             <div className="gallery">
             {characters.map((character) => (
             <figure character={character} key={character._id} className="card">

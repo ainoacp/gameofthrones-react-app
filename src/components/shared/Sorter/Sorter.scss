@@ -10,4 +10,31 @@
     height: 50px;
     color: white;
     background-color: black;
+    cursor: pointer;
+
+    &:hover{
+        transform:scale(1.1);
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.button-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line{
+    background-color: white;
+    height: 20px;
+    width:4px;
+
+}
+
+.flecha{
+    color: white;
+    font-weight: 1000;
+    font-size: xx-large;
+    transform: rotate(90deg);
+    margin-left: 3px;
 }

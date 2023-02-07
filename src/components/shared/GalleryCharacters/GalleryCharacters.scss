@@ -3,15 +3,25 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: black;
-    margin: 40px 100px 0 156px;
-    gap: 40px;
+    margin: 0px 50px 0 150px;
+    gap: 25px;
 }
+
 .card{
-    width: 248px;
-    height: 320px;
+    // width: 248px;
+    // height: 320px;
+    width: 214px;
+    height: 270px;
     position: relative;
     margin: 0;
     text-align: center;
+
+    img{
+        // width: 248px;
+        // height: 320px;
+        width: 214px;
+        height: 270px;
+    }
 }
 
 .card:hover figcaption{
@@ -22,7 +32,7 @@
 figcaption{
     display: none;
     position: absolute;
-    top: 260px;
+    top: 220px;
     left: 0;
     bottom: 0;
     right: 0;
@@ -32,12 +42,8 @@ figcaption{
     a{
         color: white;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 15px;
         margin: 0;
     }
 }
 
-img{
-    width: 248px;
-    height: 320px;
-}

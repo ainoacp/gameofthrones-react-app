@@ -9,4 +9,8 @@
     border-radius: 5px;
     border: none;
     margin: 0 20px;
+
+    &:hover{
+        opacity: 0.6;
+    }
 }
