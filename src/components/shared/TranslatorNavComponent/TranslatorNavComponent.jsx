@@ -10,10 +10,8 @@ const TranslatorNavComponent = () => {
   return (
 
     <div className="nav-translate">
-
-        <button className="button2" onClick={() => changeLanguaje('en')}>{t("")}</button>
-        <button className="button1" onClick={() => changeLanguaje('es')}>{t("")}</button>
-      
+        <button className="uk-button" onClick={() => changeLanguaje('en')}>{t("")}</button>
+        <button className="spain-button" onClick={() => changeLanguaje('es')}>{t("")}</button> 
     </div>
   );
 };

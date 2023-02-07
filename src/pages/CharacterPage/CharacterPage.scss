@@ -6,11 +6,19 @@
 .c-character-header{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
+    background-color: black;
     height: 15%;
-        
+
     .back-button-container{
         font-family: "Lato", sans-serif;
+    }
+
+    .c-character-buttons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 100px;
     }
 }
 
@@ -103,6 +111,6 @@
         max-height: 230px;
     }
 }
-.simplebar-content {
-    height: 10vh;
-}
+// .simplebar-content {
+//     height: 10vh;
+// }

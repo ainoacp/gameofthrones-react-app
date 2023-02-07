@@ -1,6 +1,8 @@
 .nav-component{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
 }
 
 .nav-link{
@@ -9,5 +11,5 @@
     font-size: 25px;
     text-transform: uppercase;
     font-family: 'GamesOfThrones';
-    margin: 50px 100px;
+    /* padding: 50px 100px; */
 }

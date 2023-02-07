@@ -1,9 +1,3 @@
-.form-container{
-    padding: 40px 200px;
-    background-color: black;
-    max-width: 800px;
-}
-
 .form{
     display: flex;
     align-items: center;
@@ -13,7 +7,7 @@
     input {
         background-color: black;
         border: none;
-        width: 788px;
+        width: 100%;
         height: 35px;
         font-size: 24px;
         color: #6c6c6c;

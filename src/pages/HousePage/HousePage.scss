@@ -6,23 +6,30 @@
 .c-house-header{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     background-color: black;
-    height: 10%;
+    height: 15%;
 
     .back-button-container{
         font-family: "Lato", sans-serif;
+    }
+
+    .c-house-buttons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 100px;
     }
 }
 
 .c-house-main{
     // min-height: 40vh;
     background-color: black;
-    height: 90%;
+    height: 85%;
     color:white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 
     &__shield{
         // height: 250px;
