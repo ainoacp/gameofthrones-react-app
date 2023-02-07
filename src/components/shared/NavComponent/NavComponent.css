@@ -13,3 +13,8 @@
     font-family: 'GamesOfThrones';
     /* padding: 50px 100px; */
 }
+
+.nav-link:hover {
+    opacity: 0.6;
+}
+ 

@@ -1,18 +1,15 @@
-.gallery{
+
+.gallery-houses{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: black;
     margin: 40px 100px 0 156px;
     gap: 20px;
-}
 
-a{    
-    text-decoration: none;
-    text-align: center;
-}
-
-img{
-    width: 248px;
-    height: 320px;
+    a{    
+        text-decoration: none;
+        text-align: center;
+    }
+    
 }
