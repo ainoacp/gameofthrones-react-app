@@ -2,7 +2,7 @@ import HomeLink from "../../components/shared/HomeLink/HomeLink";
 import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
 import NavComponent from '../../components/shared/NavComponent/NavComponent'
 import axios from "axios";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import TimelineGallery from "../../components/shared/TimelineGallery/TimelineGallery";
 // import Sorter from "../../components/shared/Sorter/Sorter";
 import './TimelinePage.scss'
