@@ -1,16 +1,17 @@
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     background-color: black;
-    margin: 40px 156px;
-    gap: 30px;
+    margin: 40px 100px 0 156px;
+    gap: 40px;
 }
 .card{
     width: 248px;
     height: 320px;
     position: relative;
     margin: 0;
+    text-align: center;
 }
 
 .card:hover figcaption{
@@ -28,12 +29,12 @@ figcaption{
     text-align: center;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.4);
-}
-
-a{
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 0;
+    }
 }
 
 img{

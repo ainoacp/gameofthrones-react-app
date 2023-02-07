@@ -1,0 +1,29 @@
+.c-timeline-page{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+.c-timeline-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    height: 15%;
+
+    .c-timeline-buttons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 100px;
+    }
+}
+
+.c-timeline-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 65%;
+}

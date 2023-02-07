@@ -1,0 +1,54 @@
+.c-home-container{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* background-image: url("https://cdn.zeplin.io/5e1c73b…/assets/6065c636-48ca-4142-8b36-8fd60a70402b.png"); */
+    background-image: url("https://cdn.wallpapersafari.com/64/61/oqG6C5.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.c-home-header{
+    height: 15%;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.c-home-buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.c-div-title{
+    height:65%;
+    width: 100%;
+
+    font-size: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    letter-spacing: 7px;
+    
+    width: 90%;
+}
+
+.c-home-footer{
+    height: 20%;
+    width: 100%; 
+    
+    display: flex;
+    align-items: center;
+}

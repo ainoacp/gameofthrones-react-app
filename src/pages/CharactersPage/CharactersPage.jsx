@@ -3,8 +3,9 @@ import './CharactersPage.scss'
 import { useEffect, useState } from "react";
 import GalleryCharacters from "../../components/shared/GalleryCharacters/GalleryCharacters";
 import NavComponent from "../../components/shared/NavComponent/NavComponent";
-import CharactersSearcher from "../../components/shared/CharactersSearcher/CharactersSearcher";
-//import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
+import TranslatorNavComponent from "../../components/shared/TranslatorNavComponent/TranslatorNavComponent";
+import Searcher from "../../components/shared/Searcher/Searcher";
+import HomeLink from "../../components/shared/HomeLink/HomeLink";
 
 
 export default function CharactersPage(){
@@ -25,11 +26,22 @@ export default function CharactersPage(){
     }
     useEffect(() => {getCharacters('')}, [])
     return (
-        <div>
-            {/* <TranslatorNavComponent></TranslatorNavComponent> */}
-            <CharactersSearcher onSubmit={filterCharacters}/>
-            <GalleryCharacters characters={filteredCharacters}/>
-            <NavComponent/>
+        <div className="c-characters-page">
+            <div className="c-characters-header">
+                <div className="c-characters-form-container">
+                    <Searcher onSubmit={filterCharacters}/>
+                </div>
+                <div className="c-characters-buttons">
+                    <HomeLink/>
+                    <TranslatorNavComponent/>
+                </div>
+            </div>
+            <div className="c-characters-main">
+                <GalleryCharacters characters={filteredCharacters}/>
+            </div>
+            <div className="c-characters-footer">
+                <NavComponent/>
+            </div>
         </div>
     )
 } 

@@ -1,3 +1,49 @@
-div{
+.c-characters-page{
     background-color: black;
+    height: 100vh;
+}
+
+.c-characters-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+
+    .c-characters-buttons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 100px;
+        width: 50%;
+    }
+
+    .c-characters-form-container{
+        padding-left: 150px;
+        width: 50%;
+    }
+}
+
+.c-characters-main{
+    height: 65%;
+    width: 100%;
+}
+
+.c-characters-footer{
+    height: 20%;
+    width: 100%; 
+    
+    display: flex;
+    align-items: center;
+}
+
+.simplebar-wrapper {
+    height: 60vh;
+}
+
+.c-form-container{
+    // padding: 40px 200px;
+    background-color: black;
+    // max-width: 800px;
+    width:60%;
+    margin-left: 10px;
 }

@@ -1,0 +1,116 @@
+.c-character-page{
+    height: 100vh;
+    background-color: black;
+}
+
+.c-character-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    height: 15%;
+
+    .back-button-container{
+        font-family: "Lato", sans-serif;
+    }
+
+    .c-character-buttons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 100px;
+    }
+}
+
+.ch-main{
+    height: 85%;
+    color:white;
+    padding: 0px 10vh;
+    // padding-top: 5vh;
+    // display: block;
+}
+
+.ch-img-section{
+    display: block;
+    // max-height: 410px;
+    height: 50%;
+
+    img{
+        width: 250px;
+        height: 80%;
+        object-fit: fill;
+    }
+
+    &__name-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h3{
+            height: 20%;
+            margin: 0px;
+    
+            font-size: 36px;
+            text-transform: uppercase;
+            font-family: "Game of Thrones";
+            font-weight: lighter;
+        }
+    }
+    
+}
+
+.ch-info-section{
+    height: 50%;
+    // padding:20px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ch-info-container{
+    width: 250px;
+    height: max-content;
+    font-family: "Lato", sans-serif;
+
+    h5{
+        font-size: 24px;
+        font-family: "Game of Thrones";
+        font-weight: lighter;
+    }
+
+    p{
+        font-size: 16px;
+        margin-top: 0;
+    }
+    a{
+        font-size: 16px;
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+        color: white;
+    }
+
+    img{
+        width: 160px;
+        height: 100%;
+    }
+}
+
+.simplebar-scrollable-y{
+    .simplebar-track.simplebar-vertical{
+        width: 3px;
+        background-color: #f6f6f65c;
+    }
+}
+.simplebar-scrollbar{
+    background-color: rgb(255, 255, 255);
+    max-height: 25px;
+    .simplebar-scrollbar::before {
+        max-height: 230px;
+    }
+}
+// .simplebar-content {
+//     height: 10vh;
+// }

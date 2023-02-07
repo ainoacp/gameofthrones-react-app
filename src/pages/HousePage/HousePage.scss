@@ -1,31 +1,73 @@
-.main{
-    min-height: 80vh;
+.c-house-page{
     background-color: black;
-    color:white;
-    padding:10vh 0px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 100vh;
 }
 
-.logo-section{
-    // height: 250px;
+.c-house-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    height: 15%;
 
-    img{
-        width: 200px;
-        height: 220px;
-        object-fit: fill;
+    .back-button-container{
+        font-family: "Lato", sans-serif;
+    }
+
+    .c-house-buttons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 100px;
     }
 }
 
-.info-section{
-    // height: 200px;
+.c-house-main{
+    // min-height: 40vh;
+    background-color: black;
+    height: 85%;
+    color:white;
     display: flex;
-    justify-content: space-around;
-    margin: 0px 100px;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__shield{
+        // height: 250px;
+        // padding: 30px 0px;
+    
+        img{
+            width: 200px;
+            height: 220px;
+            object-fit: fill;
+        }
+    }
+
+    &__info{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px 100px;
+
+        &-box{
+            width: 250px;
+            font-family: "Lato", sans-serif;
+            display: block;
+            h5{
+                font-size: 24px;
+                font-family: "Game of Thrones";
+                font-weight: lighter;
+            }
+
+            p{
+                font-size: 16px;
+                margin-top: 0;
+                color: white;
+            }
+        }
+    }
 }
 
-.info-container{
-    width: 250px;
-}
+
+
+
+
