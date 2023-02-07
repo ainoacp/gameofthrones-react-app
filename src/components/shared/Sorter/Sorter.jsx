@@ -1,16 +1,19 @@
 import './Sorter.scss'
 
-export default function Sorter({ sort }) {
+export default function Sorter({sort, setSort, age }) {
 
     const sorting = (e) => {
-        console.log(e.target.value)
-        sort(e.target.value)
+        if(sort==='Ascending'){
+            setSort('Descending');
+        } else if (sort==='Descending'){
+            setSort('Ascending');
+        }
     }
 
     return (
         <div className='button-container'>
-            <button onClick={sorting} className='circle'>18</button>
-            <button onClick={sorting} className='circle'>999</button>
+            {sort==='Ascending' && <button onClick={sorting} className='circle'>{age}</button>}
+            {sort==='Descending' && <button onClick={sorting} className='circle'>{age}</button>}
         </div>
     )
 }
