@@ -65,8 +65,10 @@ export default function TimelinePage() {
     return (
         <div className="c-timeline-page">
             <div className="c-timeline-header">
-                <HomeLink/>
-                <TranslatorNavComponent/>
+                <div className="c-timeline-buttons">
+                    <HomeLink/>
+                    <TranslatorNavComponent/>
+                </div>
             </div>
             <div className="c-timeline-main">
                 <Sorter setSort={setSort} sort={sort} age={age}></Sorter>
