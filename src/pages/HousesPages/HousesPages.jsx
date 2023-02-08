@@ -40,7 +40,7 @@ export default function HousesPage(){
         <div className="c-houses-page">
             <div className="c-houses-header">
                 <div className="c-houses-form-container">
-                    <Searcher onSubmit={filterHouses}/>
+                    <Searcher search={filterHouses}/>
                 </div>
                 <div className="c-houses-buttons">
                     <HomeLink/>
