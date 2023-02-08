@@ -13,8 +13,7 @@ export default function Sorter({sort, setSort, age }) {
     return (
         <>
             <div className='button-container'>
-                {sort==='Ascending' && <button onClick={sorting} className='circle'>{age}</button>}
-                {sort==='Descending' && <button onClick={sorting} className='circle'>{age}</button>}
+                <button onClick={sorting} className='circle'>{age}</button>
                 <div className='line'>
                     {sort==='Ascending' && <div className='flecha'>{'>'}</div>}
                     {sort==='Descending' && <div className='flecha'>{'<'}</div>}
